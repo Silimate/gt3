@@ -4620,4 +4620,84 @@ MACRO gt3_6t_xor2_x1_rvt
   END
 END gt3_6t_xor2_x1_rvt
 
+# SILIMATE: DUMMY TIE CELLS
+MACRO gt3_6t_tie_hi_silimate
+  CLASS CORE  ;
+  ORIGIN 0 0 ;
+  SYMMETRY X Y ;
+  SITE gt3v1 ;
+  FOREIGN gt3_6t_tie_hi_silimate 0 0 ;
+  SIZE 0.084 BY 0.144 ;
+  PIN HI
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M1 ;
+        RECT 0.056 0.015 0.07 0.129 ;
+    END
+  END HI
+  PIN vdd
+    DIRECTION INOUT ;
+    USE POWER ;
+    PORT
+      LAYER BPR ;
+        RECT 0 0.128 0.084 0.16 ;
+    END
+  END vdd
+  PIN vss
+    DIRECTION INOUT ;
+    USE GROUND ;
+    PORT
+      LAYER BPR ;
+        RECT 0 -0.016 0.084 0.016 ;
+    END
+  END vss
+  OBS
+    LAYER M0 SPACING 0 ;
+      RECT 0.042 0.042 0.0755 0.054 ;
+      RECT 0.01 0.066 0.054 0.078 ;
+      RECT 0.042 0.09 0.0755 0.102 ;
+  END
+END gt3_6t_tie_hi_silimate
+
+MACRO gt3_6t_tie_lo_silimate
+  CLASS CORE  ;
+  ORIGIN 0 0 ;
+  SYMMETRY X Y ;
+  SITE gt3v1 ;
+  FOREIGN gt3_6t_tie_lo_silimate 0 0 ;
+  SIZE 0.084 BY 0.144 ;
+  PIN LO
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M1 ;
+        RECT 0.056 0.015 0.07 0.129 ;
+    END
+  END LO
+  PIN vdd
+    DIRECTION INOUT ;
+    USE POWER ;
+    PORT
+      LAYER BPR ;
+        RECT 0 0.128 0.084 0.16 ;
+    END
+  END vdd
+  PIN vss
+    DIRECTION INOUT ;
+    USE GROUND ;
+    PORT
+      LAYER BPR ;
+        RECT 0 -0.016 0.084 0.016 ;
+    END
+  END vss
+  OBS
+    LAYER M0 SPACING 0 ;
+      RECT 0.042 0.042 0.0755 0.054 ;
+      RECT 0.01 0.066 0.054 0.078 ;
+      RECT 0.042 0.09 0.0755 0.102 ;
+  END
+END gt3_6t_tie_lo_silimate
+
+
 END LIBRARY

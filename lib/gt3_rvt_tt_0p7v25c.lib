@@ -20444,4 +20444,30 @@ library(gt3_rvt_tt_0p7v25c) {
       }
     }
   }
+
+  /* SILIMATE: DUMMY TIE CELLS */
+  cell(gt3_6t_tie_hi_silimate) { 
+    area : 0.012096 ; 
+    cell_leakage_power : 0.0002258 ; 
+
+    pin(HI) { 
+      direction : output ; 
+      function : "1" ; 
+      max_capacitance : 0.1047 ; 
+      min_capacitance : 0.001 ; 
+      output_voltage : default ;
+    }
+  }
+  cell(gt3_6t_tie_lo_silimate) { 
+    area : 0.012096 ; 
+    cell_leakage_power : 0.0002258 ; 
+
+    pin(LO) { 
+      direction : output ; 
+      function : "0" ; 
+      max_capacitance : 0.1047 ; 
+      min_capacitance : 0.001 ; 
+      output_voltage : default ;
+    }
+  }
 }
